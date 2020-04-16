@@ -1,4 +1,4 @@
-## Mapy w C++
+# Mapy w C++
 
 Aby skorzystać z mapy w C++ dodajemy do programu bibliotekę `map.h`
 
@@ -6,7 +6,7 @@ Aby skorzystać z mapy w C++ dodajemy do programu bibliotekę `map.h`
 Klasyczne tablice w C++ mają z góry określoną ilość przetrzymywanych elementów oraz pozwalają na korzystanie tylko z indeksów liczbowych.
 Ze względu na swój ograniczony rozmiar, odniesienie się do za dużych indeksów powoduje błąd programu.
 
-# Przykład
+### Przykład
 ```
 int tab[3000];
 
