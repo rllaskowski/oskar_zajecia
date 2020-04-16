@@ -4,9 +4,6 @@ using namespace std;
 int tab[10]; //ile mamy kazdego z nawozow
 
 int main() {
-    cout << (int)'1' << endl;
-    cout << (int)'2' << endl;
-
     int n;
     int l; 
     string a;
@@ -19,8 +16,10 @@ int main() {
     }
     for (int i = 0;i < l;i++){
         if(a[i] != 'D'){
-            
-        }
+            char cyfra = a[i];
+
+            int kategoria = cyfra-'0';
+        } 
     }
     
     
