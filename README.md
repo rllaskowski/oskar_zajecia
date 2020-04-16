@@ -1,1 +1,1 @@
-# oskar_zajecia
+# Zajęcia z przygotowujące do OIJ
