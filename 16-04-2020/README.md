@@ -57,6 +57,9 @@ map<string, string> kolega;
 kolega["Andrzej"] = "Maciej";
 ```
 
+Pamiętajmy jednak, że bezzensowne korzystanie z map zamiast tablic, będzie kosztować nas trochę dluższym czasem działania programu. 
+Nie nadużywajmy ich jeśli są niepotrzebne.
+
 # Zbiory w C++
 
 Aby skorzystać z mapy w C++ dodajemy do programu bibliotekę `set.h`
