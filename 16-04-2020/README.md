@@ -3,7 +3,7 @@
 Aby skorzystać z mapy w C++ dodajemy do programu bibliotekę `map.h`
 
 ## Mapy a tablice
-Klasyczne tablice w C++ mają z góry określoną ilość przetrzymywanych elementów oraz pozwalają na korzystanie tylko z indeksów liczbowych.
+Klasyczne tablice w C++ mają z góry określoną, stałą ilość przetrzymywanych elementów oraz pozwalają na korzystanie tylko z indeksów liczbowych.
 Ze względu na swój ograniczony rozmiar, odniesienie się do za dużych indeksów powoduje błąd programu.
 
 ### Przykład
@@ -55,4 +55,24 @@ ocena["Ala"] = 5;
 map<string, string> kolega;
 
 kolega["Andrzej"] = "Maciej";
+```
+
+# Zbiory w C++
+
+Aby skorzystać z mapy w C++ dodajemy do programu bibliotekę `set.h`
+
+Zbiór(**ang. set**) jest kolejną strukturą w C++, która w przeciwieństwie do tablic, nie posiada stałego rozmiaru.
+Najważniejszymi funkcjami jakie udostępnia, jest dodawanie do niego nowych wartości oraz sprawdzanie czy jakaś wartość w nim występuje.
+Ważną rzeczą w zbiorach jest to, że każda wartość występuje w nim dokładnie raz! Dodanie drugi raz tej samej wartości do zbioru nie powoduje zmiany.
+
+
+### Przykład
+```
+// Tworzymy nowy zbiór zawierający zmienne typu int
+set<int> zbior;
+
+// Do zbioru możemy dodawać nowe wartości funkcją **insert**
+
+
+
 ```
