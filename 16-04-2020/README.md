@@ -62,7 +62,7 @@ kolega["Andrzej"] = "Maciej";
 Aby skorzystać z mapy w C++ dodajemy do programu bibliotekę `set.h`
 
 Zbiór(**ang. set**) jest kolejną strukturą w C++, która w przeciwieństwie do tablic, nie posiada stałego rozmiaru.
-Najważniejszymi funkcjami jakie udostępnia, jest dodawanie do niego nowych wartości oraz sprawdzanie czy jakaś wartość w nim występuje.
+Najważniejszymi funkcjami jakie udostępnia, jest dodawanie do niego nowych wartości oraz sprawdzanie czy jakaś wartość w nim występuje(oraz wiele innych).
 Ważną rzeczą w zbiorach jest to, że każda wartość występuje w nim dokładnie raz! Dodanie drugi raz tej samej wartości do zbioru nie powoduje zmiany.
 
 
