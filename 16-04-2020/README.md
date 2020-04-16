@@ -71,8 +71,27 @@ Ważną rzeczą w zbiorach jest to, że każda wartość występuje w nim dokła
 // Tworzymy nowy zbiór zawierający zmienne typu int
 set<int> zbior;
 
-// Do zbioru możemy dodawać nowe wartości funkcją **insert**
+// Do zbioru możemy dodawać nowe wartości funkcją insert()
+zbior.insert(3);
+zbior.insert(5);
+zbior.insert(10);
+
+// Ta instrukcja nie będzie miala wpływu na nasz zbiór, ponieważ zawiera on już wartość 5
+zbior.insert(5);
+
+// Błąd! Nasz zbiór trzyma zmienne typu int
+zbiór.insert("napis");
+
+// Możemy sprawdzić jaka jest wielkość naszego zbioru funkcją size()
+if (zbior.size() == 3) {
+    cout << "Ten tekst zostanie wypisany, ponieważ do zbioru należą 3 wartości: 3, 5, 10";
+}
 
 
+// Sprawdzenie czy wartość jest w zbiorze jest trochę trudniejsze.
+// Korzystamy tu z iteratorów, ale o tym kiedy indziej
+if (zbior.find(5) != zbior.end()) {
+    cout << "Zbiór zawiera wartość 5";
+}
 
 ```
