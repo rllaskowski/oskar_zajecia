@@ -58,7 +58,7 @@ kolega["Andrzej"] = "Maciej";
 ```
 
 Pamiętajmy jednak, że bezzensowne korzystanie z map zamiast tablic, będzie kosztować nas trochę dluższym czasem działania programu. 
-Nie nadużywajmy ich jeśli są niepotrzebne.
+Nie nadużywajmy ich jeśli są niepotrzebne, a kod da się napisać za pomocą zwykłych tablic.
 
 # Zbiory w C++
 
