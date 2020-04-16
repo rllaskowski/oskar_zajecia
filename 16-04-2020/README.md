@@ -32,22 +32,27 @@ jaki będzie typ trzymanych zmiennych. Wielkości mapy nie ogranicza również n
 
 ```
 // Tworzymy mapę indeksowaną przez int, która trzyma zmienne typu string
-map<int, string> imiona;
+map<int, string> miejsce;
 
-imiona[0] = "Oskar";
+miejsce[1] = "Oskar";
 
 // Świetnie! możemy korzystać z naprawdę dużych indeksów
-imiona[12312411] = "Maciej";
+miejsce[12312411] = "Maciej";
 
 // A nawet z indeksów ujemnych! 
-imiona[-1233] = "Bartosz";
+miejsce[-1233] = "Bartosz";
 
 // Błąd... indeksy stworzonej przez nas mapy mają być typu int!
-imiona["Ala"] = "Błażej"
+miejsce["Ala"] = "Błażej"
 
 // Stwórzmy tablicę indeksowaną przez typ string, trzymającą wartości typu int
-map<string, int> oceny;
+map<string, int> ocena;
 
 // Teraz jest dobrze.
-oceny["Ala"] = 5;
+ocena["Ala"] = 5;
+
+// A teraz mapa indeksowana przez string, trzymająca zmienne typu string
+map<string, string> kolega;
+
+kolega["Andrzej"] = "Maciej";
 ```
