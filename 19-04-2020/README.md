@@ -35,7 +35,7 @@ int pocz, kon; // dany początek oraz koniec przedziału z zapytania
 ...
 cin >> zapytania;
 
-for (int t = 0; t < testy; t++) {
+for (int z = 0; z < zapytania; z++) {
     cin >> pocz >> kon;
 
     int suma = 0;
