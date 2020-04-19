@@ -4,14 +4,13 @@ Dosyć często w zadaniach pojawia się pytanie o sumy wartości znajdujących s
 
 [Przykładowe zadanie](halloween.pdf)
 
+Prostym i brutalnym rozwiązaniem jest przejście pętlą po przedziale i sumowanie znajdujących się tam liczb.
 
-Prostym i brutalnym rozwiązaniem jest przechodzenie po zadanym przedziale i sumowanie znajdujących się tam liczb:
-
-### Przykład przechodzenia po zadanym przedziale
+### Przykład
 ```
 int cukierki[MAX];
 ...
-int pocz, kon; // dany początek oraz koniec przedziału z zapytania
+int pocz, kon; // początek oraz koniec przedziału z zapytania
 ...
 cin >> pocz >> kon;
 
@@ -23,15 +22,15 @@ for (int i = pocz; i <= kon; i++) {
 cout << suma << endl;
 ```
 Często jednak takie zapytania są w jednym teście powtarzane. 
-Rozwiązanie brutalne, polegające na prostym przechodzeniu przez przedział może okazać się niewystarczająco
-optymalne. Wydaje się, ze niektóre obliczenia niepotrzebnie powtarzamy przy każdym zapytaniu.
+Rozwiązanie brutalne, polegające przechodzeniu przez przedział może okazać się niewystarczająco
+optymalne. Wydaje się, że niektóre obliczenia niepotrzebnie powtarzamy przy każdym zapytaniu.
 
-### Przyklad wielokrotnego przechodzenia po zadanych przedziałach
+### Przykład 
 ```
 int cukierki[MAX];
 ...
 int zapytania; // ilość zapytań w teście
-int pocz, kon; // dany początek oraz koniec przedziału z zapytania
+int pocz, kon; // początek oraz koniec przedziału z zapytania
 ...
 cin >> zapytania;
 
@@ -44,6 +43,37 @@ for (int z = 0; z < zapytania; z++) {
     }
 
     cout << suma << endl;
+}
+
+```
+
+Uprośćmy nasz problem: początek przedziału zawsze będzie znajdował się na pierwszej wartości.
+Jak możemy teraz usprawnić działanie algorytmu? 
+
+Zauważmy, że suma wartości na przedziale od 1 do n jest równa sumie wartości na przedziale 
+od 1 do (n-1) + ta wartość.
+
+Korzystając z tej prostej obserwacji spamiętajmy sumy wartości na kolejnych **prefiksach** (początkowych elementach ciągu).
+
+### Przykład 
+```
+int cukierki[MAX];
+int sumy[MAX];
+...
+sumy[0] = 0;
+for (int i = 1; i < MAX; i++) {
+    sumy[i] = sumy[i-1]+cukierki[i];
+}
+...
+int zapytania; // ilość zapytań w teście
+int kon; // koniec przedziału z zapytania
+...
+cin >> zapytania;
+
+for (int z = 0; z < zapytania; z++) {
+    cin >> kon;
+
+    cout << sumy[kon] << endl;
 }
 
 ```
