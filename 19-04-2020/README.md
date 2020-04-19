@@ -50,8 +50,8 @@ for (int z = 0; z < zapytania; z++) {
 Uprośćmy nasz problem: początek przedziału zawsze będzie znajdował się na pierwszej wartości.
 Jak możemy teraz usprawnić działanie algorytmu? 
 
-Zauważmy, że suma wartości na przedziale od 1 do n jest równa sumie wartości na przedziale 
-od 1 do (n-1) + ta wartość.
+Zauważmy, że suma wartości na przedziale od *1* do *n* jest równa sumie wartości na przedziale 
+od *1* do *n-1* + ta wartość.
 
 Korzystając z tej prostej obserwacji spamiętajmy sumy wartości na **prefiksach** (początkowych elementach) ciągu.
 Zróbmy to przed pierwszym zapytaniem. Teraz przy każdym zapytaniu możemy odnieść się do zapamiętanej wcześniej wartości.
@@ -94,10 +94,10 @@ Wracamy do oryginalnego problemu. Jak możemy wykorzystać sumy prefiksowe, kied
 znajduje się na pierwszej wartości?
 
 Chcemy korzystając z naszej powyżej tabeli móc natychmiast odpowiedzieć na pytanie - jaka jest suma cukierków na przedziale
-od 4 do 8. 
+od *4* do *8*. 
 
-Zauważmy, że suma cukierków na przedziale od 1 do 8 (`sumy[ 8 ]`) jest równa sumie cukierków od 1 do 3(`sumy[ 3 ]`) plus
-suma cukierków od 4 do 8, czyli dokładnie ta o którą pytamy.
+Zauważmy, że suma cukierków na przedziale od *1* do *8* (`sumy[ 8 ]`) jest równa sumie cukierków od *1* do *3*(`sumy[ 3 ]`) plus
+suma cukierków od *4* do *8*, czyli dokładnie ta o którą pytamy.
 
 Ale to oznacza, że suma o którą pytamy jest równa `sumy[8]-sumy[3]`!
 
@@ -105,5 +105,29 @@ Ale to oznacza, że suma o którą pytamy jest równa `sumy[8]-sumy[3]`!
 1 + 15 + 3 + 8 = (1 + 4 + 2 + 1 + 1 + 15 + 3 + 8) - (1 + 4 + 2)  
 ```
 
+**Uogólniając**: suma wartości na przedziale od *p* do *k* jest równa sumie wartości od *1* do *k* - suma wartości od
+*1* do *p-1* 
 
+Przełóżmy to na kod:
 
+```cpp
+int cukierki[MAX];
+int sumy[MAX];
+...
+// Obliczamy sumy prefiksowe
+sumy[0] = 0;
+for (int i = 1; i < MAX; i++) {
+    sumy[i] = sumy[i-1]+cukierki[i];
+}
+...
+int zapytania; // ilość zapytań w teście
+int pocz, kon; // początek i koniec przedziału z zapytania
+...
+cin >> zapytania;
+
+for (int z = 0; z < zapytania; z++) {
+    cin >> pocz >> kon;
+
+    cout << sumy[kon]-sumy[pocz-1]<< endl;
+}
+```
