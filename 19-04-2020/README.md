@@ -1,10 +1,13 @@
-#Sumy prefiksowe
+# Sumy prefiksowe
 
 Dosyć często w zadaniach pojawia się pytanie o sumy wartości znajdujących się na zadanym przedziale.
-[przykładowe zadanie](halloween.pdf)
+
+[Przykładowe zadanie](halloween.pdf)
+
+
 Prostym i brutalnym rozwiązaniem jest przechodzenie po zadanym przedziale i sumowanie znajdujących się tam liczb:
 
-###Przykład
+### Przykład
 ```
 int cukierki[MAX];
 ...
