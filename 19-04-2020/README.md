@@ -53,7 +53,9 @@ Jak możemy teraz usprawnić działanie algorytmu?
 Zauważmy, że suma wartości na przedziale od 1 do n jest równa sumie wartości na przedziale 
 od 1 do (n-1) + ta wartość.
 
-Korzystając z tej prostej obserwacji spamiętajmy sumy wartości na kolejnych **prefiksach** (początkowych elementach ciągu).
+Korzystając z tej prostej obserwacji spamiętajmy sumy wartości na **prefiksach** (początkowych elementach) ciągu. 
+Zróbmy to przed pierwszym zapytaniem. Teraz przy każdym zapytaniu możemy odnieść się do zapamiętanej wcześniej wartości.
+
 
 ### Przykład 
 ```
@@ -77,3 +79,8 @@ for (int z = 0; z < zapytania; z++) {
 }
 
 ```
+Przykładowa zawartość tablicy cukierki oraz odpowiadającej jej tablicy sumy
+
+
+|indeksy|0  |1  |2  |
+|-------|---|---|---|
