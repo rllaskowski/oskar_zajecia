@@ -1,12 +1,8 @@
 #include <iostream>
 using namespace std;
 
-
 int prod[1000001];
-/*
-1 1 11 3 4 9 4 2
 
-*/
 
 int main() {
     int p;
