@@ -82,5 +82,7 @@ for (int z = 0; z < zapytania; z++) {
 Przykładowa zawartość tablicy cukierki oraz odpowiadającej jej tablicy sumy
 
 
-|indeksy|0  |1  |2  |
-|-------|---|---|---|
+|indeksy|0  |1  |2  |4  |5  |
+|-------|---|---|---|---|---|
+|cukieri|0  |4  |2  |1  |15 | 
+|sumy   |0  |4  |6  |7  |22 |
