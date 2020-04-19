@@ -12,11 +12,15 @@ Prostym i brutalnym rozwiązaniem jest przechodzenie po zadanym przedziale i sum
 int cukierki[MAX];
 ...
 int pocz, kon; // dany początek oraz koniec przedziału z zapytania
+...
 cin >> pocz >> kon;
+
 int suma = 0;
+
 for (int i = pocz; i <= kon; i++) {
     suma += cukierki[i];
 }
+
 cout << suma << endl;
 ```
 Często jednak takie zapytania są w jednym teście powtarzane. 
@@ -29,6 +33,8 @@ int cukierki[MAX];
 ...
 int zapytania; // ilość zapytań w teście
 int pocz, kon; // dany początek oraz koniec przedziału z zapytania
+...
+cin >> zapytania;
 
 for (int i = 0; i < testy; i++) {
     cin >> pocz >> kon;
