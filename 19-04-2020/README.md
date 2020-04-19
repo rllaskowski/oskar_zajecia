@@ -7,7 +7,7 @@ Dosyć często w zadaniach pojawia się pytanie o sumy wartości znajdujących s
 Prostym i brutalnym rozwiązaniem jest przejście pętlą po przedziale i sumowanie znajdujących się tam liczb.
 
 ### Przykład
-```c++
+```cpp
 int cukierki[MAX];
 ...
 int pocz, kon; // początek oraz koniec przedziału z zapytania
@@ -26,7 +26,7 @@ Rozwiązanie brutalne, polegające przechodzeniu przez przedział może okazać 
 optymalne. Wydaje się, że niektóre obliczenia niepotrzebnie powtarzamy przy każdym zapytaniu.
 
 ### Przykład 
-```c++
+```cpp
 int cukierki[MAX];
 ...
 int zapytania; // ilość zapytań w teście
@@ -101,7 +101,9 @@ suma cukierków od 4 do 8, czyli dokładnie ta o którą pytamy.
 
 Ale to oznacza, że suma o którą pytamy jest równa `sumy[8]-sumy[3]`!
 
-`
+```
+1 + 15 + 3 + 8 = (1 + 4 + 2 + 1 + 1 + 15 + 3 + 8) - (1 + 4 + 2)  
+```
 
 
 
