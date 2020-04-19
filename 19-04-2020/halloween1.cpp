@@ -1,7 +1,7 @@
 /**
  * Rozwiązanie zadania Halloween 
- * Podejście wzorcowe - obliczanie sum na przedziale
- * korzystając z sum prefiksowych
+ * Podejście naiwne - przechodzenie po przedziale
+ * przy każdym zapytaniu
 **/
 
 #include <iostream>
@@ -19,17 +19,19 @@ int main() {
     
     for (int i = 1; i <= n; i++){
         cin >> cukierki[i];
-        
-        cukierki[i] += cukierki[i-1];
-    }    
+    }
 
     for(int i = 0 ; i < t ; i++){
         cin >> pocz;
         cin >> kon;
         
         suma = 0;
+
+        for (int j = pocz; j <= kon; j++) {
+            suma += cukierki[j];
+        }
        
-        cout << cukierki[kon]-cukierki[pocz-1] << endl;
+        cout << suma << endl;
     }
     
     return 0;

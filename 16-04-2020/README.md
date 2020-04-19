@@ -6,8 +6,7 @@ Aby skorzystać z mapy w C++ dodajemy do programu bibliotekę `map.h`
 Klasyczne tablice w C++ mają z góry określoną, stałą ilość przetrzymywanych elementów oraz pozwalają na korzystanie tylko z indeksów liczbowych.
 Ze względu na swój ograniczony rozmiar, odniesienie się do za dużych indeksów powoduje błąd programu.
 
-### Przykład
-```
+```cpp
 int tab[3000];
 
 // poprawne ponieważ 222 < 3000
@@ -28,9 +27,8 @@ tab["Napis"] = 10;
 Korzystanie z mapy znosi oba ograniczenia! Tworząc mapę możemy zdecydowąc jakim typem zmiennym będzie ona indeksowana, oraz
 jaki będzie typ trzymanych zmiennych. Wielkości mapy nie ogranicza również nic poza ilością pamięci naszego komputera.
 
-### Przykład
 
-```
+```cpp
 // Tworzymy mapę indeksowaną przez int, która trzyma zmienne typu string
 map<int, string> miejsce;
 
@@ -69,8 +67,7 @@ Najważniejszymi funkcjami jakie udostępnia, jest dodawanie do niego nowych war
 Ważną rzeczą w zbiorach jest to, że każda wartość występuje w nim dokładnie raz! Dodanie drugi raz tej samej wartości do zbioru nie powoduje zmiany.
 
 
-### Przykład
-```
+```cpp
 // Tworzymy nowy zbiór zawierający zmienne typu int
 set<int> zbior;
 
