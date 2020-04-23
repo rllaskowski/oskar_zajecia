@@ -55,8 +55,8 @@ map<string, string> kolega;
 kolega["Andrzej"] = "Maciej";
 ```
 
-Pamiętajmy jednak, że bezzensowne korzystanie z map zamiast tablic, będzie kosztować nas trochę dluższym czasem działania programu. 
-Nie nadużywajmy ich jeśli są niepotrzebne, a rowziązanie da się napisać za pomocą zwykłych tablic.
+Pamiętajmy jednak, że bezensowne korzystanie z map zamiast tablic, będzie kosztować nas trochę dluższym czasem działania programu. 
+Nie nadużywajmy ich jeśli są niepotrzebne, a rozwiązanie da się napisać za pomocą zwykłych tablic.
 
 # Zbiory w C++
 
