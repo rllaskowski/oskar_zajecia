@@ -5,11 +5,11 @@ using namespace std;
 int tab[100000];
 
 
-/*
-1 3 5 7 6 4 2 8
-
-
-1 4 3 4 
+        /*     9
+           9       8 
+         9   4   8   2   
+        9 0 4 0 7 8 9 2      
+    
 */
 int main(){
     int n;
