@@ -10,6 +10,42 @@ vector<pair<int, int > >konce[301];
 int pref[300];
 
 
+
+/*
+5 6 4
+1 1 1 1
+4 1 5 2
+1 4 3 6
+1 6 5 6
+
+
+poczatek:
+1: (1,1), (4,6), (6,6)
+2
+3
+4: (1,2)
+5
+
+
+koniec:
+1: (1,1)
+2
+3: (4,6)
+4
+5: (1,2), (6,6)
+
+
+1 0  -1 0 0 1 -1
+
+1 0  0 1 1 2
+0 0  0 1 1 2
+0 0  0 1 1 2
+1 1  0 0 0 1
+
+
+
+*/
+
 int main() {
   int n;
   int m;
@@ -28,17 +64,31 @@ int main() {
    konce[x2].push_back(kolumny);
   }
   
-  // poczatki[8].size() - ile prostokotow zaczetych w 8 wierszu
-  // poczatki[8][3] - para 3 prostokąta rozpoczątego w 8 wierszu
   
-  
-  // konce[i].size() > 0
-  
-  for(int i = 0;i<n;i++){
-    for(int j = 0;j<m;j++){
-      cout << tab[i][j] << " ";
+  for(int i = 1;i <= n; i++) {
+    for (int j = 0; j < poczatki[i].size(); j++) {
+      pair<int, int> para = poczatki[i][j];
+          
+      pref[para.first] ++;
+      pref[para.second+1] --;
+    }
+    
+    int suma = 0;
+    
+    for(int k = 1;k<=m;k++){
+      suma += pref[k];
+      
+      cout << suma << " ";
     }
     cout << endl;
+    
+    for (int j = 0; j < konce[i].size(); j++) {
+      pair<int, int> para = konce[i][j];
+          
+      pref[para.first] --;
+      pref[para.second+1] ++;
+    }
+
   }  
   return 0;
 }
