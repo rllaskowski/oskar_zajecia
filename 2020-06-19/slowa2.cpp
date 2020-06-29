@@ -23,13 +23,11 @@ int main(){
       s++;
     }
     
-    
     while (s > k) {
       // przesuwamy koniec gasiennicy o jeden w prawo
       // wiec usuwamy ostatnia litere
       
       tab[a[kon]-'a']--;
-    
       if(tab[a[kon] - 'a'] == 0){
         s--;
       }
