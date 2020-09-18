@@ -29,7 +29,7 @@ int n;
 int m;
 queue<pair<int, int> > kolejka;  
 
-void rozlejNa(int x, int y, int jakaOdleglosc) {
+void popraw(int x, int y, int jakaOdleglosc) {
   if (x == 0 || x > n || y == 0 || y > m) {
     return;
   }
@@ -63,10 +63,10 @@ int main() {
     int x = a.first;
     int y = a.second;
     
-    rozlejNa(x+1, y, odl[x][y]+1);
-    rozlejNa(x-1, y, odl[x][y]+1);
-    rozlejNa(x, y+1, odl[x][y]+1);
-    rozlejNa(x, y-1, odl[x][y]+1);
+    popraw(x+1, y, odl[x][y]+1);
+    popraw(x-1, y, odl[x][y]+1);
+    popraw(x, y+1, odl[x][y]+1);
+    popraw(x, y-1, odl[x][y]+1);
   }
 
   
