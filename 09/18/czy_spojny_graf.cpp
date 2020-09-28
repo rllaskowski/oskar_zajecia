@@ -7,17 +7,6 @@ using namespace std;
 vector<int> kraw[1000];
 bool odw[1000];
 
-/*
-n = 5 m = 7
-
-1 2
-3 5
-2 4
-4 3
-...
-
-*/
-
 void dfs(int v) {
   /* jestesmy w wierzzcholku o numerze v
   zaznaczmy ze ten wierzcholek zostal juz odwiedzony
