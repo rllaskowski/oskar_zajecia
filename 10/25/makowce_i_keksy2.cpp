@@ -7,16 +7,19 @@ int makowiec[100000];
 int keks[100000];
 int n;
 
-/*
-s[i]-s*k[i]/(m[i]-k[i])
-
-*/
 
 bool czyMogeUgotowac(int s) {
-    // TODO
+    int p = 0;
+    int k = s;
+
     for(int i = 0;i<n;i++){
-        if(skladniki[i]-s*keks[i]/(makowiec[i]-keks[i])<0){
-            return false;
+        if (keks[i] != makowiec[i]) {
+            p = max(p, s-(skladniki[i]-s*keks[i]/(makowiec[i]-keks[i]))); 
+            k = min(k, skladniki[i]-s*makowiec[i]/(keks[i]-makowiec[i]));
+            
+            if (p > k) {
+                return false;
+            }
         }
     }
     return true;
@@ -48,7 +51,7 @@ int main() {
         if (czyMogeUgotowac(s) == false) {
             k = s-1;
         } else {
-            wynik = max(wynik, s);
+            wynik = s;
             p = s+1;
         }
     }
