@@ -1,10 +1,6 @@
 # Geometria
 
-<<<<<<< HEAD
 ## Nierówność trójkąta:
-=======
-- Nierówność trójkąta:
->>>>>>> f674e521667b07f643fb38ed305c40056c8cdf37
 
 jeśli oznaczymy boki trójkąta jako a,b,c - tak że 
 
@@ -27,10 +23,5 @@ bool czyTrojkat(int a, int b, int c) {
 }
 ```
 
-<<<<<<< HEAD
 ### Tw. Pitagorasa
-=======
-
-
->>>>>>> f674e521667b07f643fb38ed305c40056c8cdf37
 
