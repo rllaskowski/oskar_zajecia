@@ -66,7 +66,7 @@ W zdecydowanej większości zadań, nie jest nam potrzebna dokładna odległoś�
 bool czyMniejsza(pair<int, int> p1, pair<int, int p2>, long long odleglosc) {
     /*
     Uwaga - używamy long longów, ponieważ podnosimy te zmienne do kwadratu. 
-    Prawdopodobnie ich wartości będą za duże na int'a
+    Prawdopodobnie te wartości będą za duże na int'a
     */
     long long a = p1.first-p2.first;
     long long b = p1.second-p2.second;
