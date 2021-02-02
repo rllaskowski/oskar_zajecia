@@ -3,9 +3,7 @@
 ## Nierówność trójkąta:
 
 Jeśli oznaczymy boki trójkąta jako a,b,c - tak że 
-``` 
-a >= b >= c
-```
+[nierówność](http://www.sciweavers.org/tex2img.php?eq=a%20%5Cgeq%20b&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 to zachodzi nierówność
 ```math
 b+c > a
