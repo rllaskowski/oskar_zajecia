@@ -3,7 +3,9 @@
 ## Nierówność trójkąta:
 
 Jeśli oznaczymy boki trójkąta jako a,b,c - tak że 
-[nierówność](http://www.sciweavers.org/tex2img.php?eq=a%20%5Cgeq%20b&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+``` 
+a >= b >= c
+```
 to zachodzi nierówność
 ```math
 b+c > a
@@ -61,7 +63,10 @@ W zdecydowanej większości zadań, nie jest nam potrzebna dokładna odległoś�
 
 ```cpp
 
-bool czyMniejsza(pair<int, int> p1, pair<int, int p2>, int odleglosc) {
+bool czyMniejsza(pair<int, int> p1, pair<int, int p2>, long long odleglosc) {
+    /*
+    Uwaga - używamy long longów, ponieważ podnosimy te zmienne do kwadratu. Prawdopodobnie ich wartości będą za duże na int'a
+    */
     long long a = p1.first-p2.first;
     long long b = p1.second-p2.second;
 
