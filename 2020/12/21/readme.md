@@ -1,0 +1,1 @@
+zadanie ogrodzenie + podobienstwo trojkatow
