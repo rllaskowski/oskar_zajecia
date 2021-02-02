@@ -2,16 +2,18 @@
 
 ## Nierówność trójkąta:
 
-jeśli oznaczymy boki trójkąta jako a,b,c - tak że 
-
-a >= b >= c
-
+Jeśli oznaczymy boki trójkąta jako a,b,c - tak że 
+```math
+a \geq b \geq c
+```
 to zachodzi nierówność
-
+```math
 b+c > a
-
+```
 Również w drugą stronę - trójkąt można zbudować, tylko jeśli suma krótszych boków jest większa
 niż najdłuższy bok.
+
+(Nierówność trójkąta)[http://oblicz.com.pl/nierownosc-trojkata/]
 
 ```cpp
 
@@ -23,5 +25,9 @@ bool czyTrojkat(int a, int b, int c) {
 }
 ```
 
-### Tw. Pitagorasa
+## Tw. Pitagorasa
 
+Jeśli długości boków trójkąta prostokątnego to a,b,c
+oraz a,b - długości przyprostokątnych, c - długość przecwiprostokątnej
+
+to zachodzi a
