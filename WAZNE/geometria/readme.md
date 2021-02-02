@@ -58,14 +58,14 @@ float odlegosc(pair<int, int> p1, pair<int, int p2>) {
 }
 ```
 
-`UWAGA!!`
+**UWAGA!**
 W zdecydowanej większości zadań, nie jest nam potrzebna dokładna odległość między punktami, tylko informacja, czy ta odległość jest mniejsza/większa/równa jakiejś liczbie(ew. chcemy porównać dwie odległości). W tym celu nie musimy(wręcz nie powinniśmy) wyciągąć pierwiastka w ostatnim kroku. Należy zachować kwadrat odległości i porównać go z kwadratem odpowiedniej liczby:
 
 ```cpp
 
 bool czyMniejsza(pair<int, int> p1, pair<int, int p2>, int odleglosc) {
-    int a = p1.first-p2.first;
-    int b = p1.second-p2.second;
+    long long a = p1.first-p2.first;
+    long long b = p1.second-p2.second;
 
     int odlKwadrat = a*a+b*b;
 
