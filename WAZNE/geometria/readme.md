@@ -71,7 +71,7 @@ bool czyMniejsza(pair<int, int> p1, pair<int, int p2>, long long odleglosc) {
     long long a = p1.first-p2.first;
     long long b = p1.second-p2.second;
 
-    int odlKwadrat = a*a+b*b;
+    long long odlKwadrat = a*a+b*b;
 
     return odlKwadrat < odleglosc*odleglosc;
 }
@@ -83,4 +83,6 @@ Dzięki temu unikamy używania typów zmiennoprzecinkowych: float, double, ...
 
 
 
+## Podobieństwo trójkątów
 
+[Do przeczytania](https://www.matemaks.pl/podobienstwo-trojkatow.html)
