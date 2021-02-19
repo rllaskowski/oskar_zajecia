@@ -3,7 +3,7 @@
 using namespace std;
 
 int ileDzielnikow[1000001];
-int sumyPref[240][1000001];
+short int sumyPref[240][1000001];
 
 int main() {
     for(int i = 1;i<=1000000;i++){
@@ -29,13 +29,9 @@ int main() {
         int s = 0;
         int wyn = 0;
         for (int d = 1; d <= 240; d++) {
-            s = 0;
-            for(int j = x;j<=y;j++){
-                if(ileDzielnikow[j]==d){
-                    wyn += s;
-                    s++;
-                }
-            }
+            s = sumyPref[d][y]-sumyPref[d][x-1];
+            wyn += s * (s-1) / 2;
+            
         }
         cout << wyn << endl;
         
