@@ -10,7 +10,7 @@ int main() {
     int n, m;
     cin >> n >> m;
     int s = 0;
-    int maks = 0;
+    int maks = -1000001;
     for(int i = 1;i<=n;i++){
         for(int j = 1;j<=m;j++){
             cin >> tab[i][j];
