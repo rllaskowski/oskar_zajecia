@@ -27,8 +27,8 @@ int main() {
     cin >> a >> b >> c >> d;
     vector <int> vctA = dz(c);
     vector <int> vctB = dz(d);
-    for(int x : vctA){
-        for(int y : vctB){
+    for(long long x : vctA){
+        for(long long y : vctB){
             // z tych dzielnikow mamy 3: x, y, x*y
 
             if (czyDobra(x, c*d / x, a, b)){
