@@ -18,8 +18,30 @@ pair <int, int> find(int x){
     return p[x];
 }
 
-int main() {
-    
+void Union(int a, int b, int c){
+    pair <int, int> A = find(a);
+    pair <int, int> B = find(b);
+    //cout << "Łącze!: " << A.first << " " << B.first << endl;
+    if(A.first != B.first || (A.first == 0 || B.first == 0)){
+        cout << "TAK" << endl;
+        p[B.first].first = A.first;
+        p[B.first].second = c - B.second + A.second;
+    }else{
+        if(c == B.second - A.second){
+            cout << "TAK" << endl; 
+        }else{
+            cout << "NIE" << endl;
+        }
+    }
+    return;
+}
 
+int main() {
+    int n, m, a, b, c;
+    cin >> n >> m;
+    for(int i = 0;i<m;i++){
+        cin >> a >> b >> c;
+        Union(a, b, c);
+    }
     return 0;
 }
