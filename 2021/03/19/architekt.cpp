@@ -21,7 +21,7 @@ pair <int, int> find(int x){
 void Union(int a, int b, int c){
     pair <int, int> A = find(a);
     pair <int, int> B = find(b);
-    //cout << "Łącze!: " << A.first << " " << B.first << endl;
+    
     if(A.first != B.first || (A.first == 0 || B.first == 0)){
         cout << "TAK" << endl;
         p[B.first].first = A.first;

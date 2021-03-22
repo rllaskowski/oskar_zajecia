@@ -15,8 +15,17 @@ int find(int x){
     if(tab[x].glowny == x){
         return x;
     }
-    tab[x].glowny = find(tab[x].glowny);
-    return 
+ 
+    return tab[x].glowny = find(tab[x].glowny);
+}
+
+void Union(int a, int b){
+    int A = find(a);
+    int B = find(b);
+    tab[A].glowny = B;
+    tab[B].masa += tab[A].masa;
+    tab[B].min_iq = min(tab[B].min_iq, tab[A].min_iq);
+    tab[B].max_iq = max(tab[B].max_iq, tab[B].max_iq);
 }
 
 int main() {
