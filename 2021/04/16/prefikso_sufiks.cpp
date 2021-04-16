@@ -21,12 +21,14 @@ int main() {
 
         int wsk = p[i-1];
 
-        while () {
-            
+        while (wsk != 0 && t[i] != t[wsk+1]) {
+            wsk = p[wsk];
         }
 
         if(t[i] == t[wsk+1]){
             p[i] = wsk+1;
+        } else {
+            p[i] = 0;
         }
     }
 
