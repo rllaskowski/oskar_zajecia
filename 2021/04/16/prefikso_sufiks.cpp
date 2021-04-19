@@ -5,11 +5,7 @@ using namespace std;
 
 int p[10000000];
 
-int main() {
-    string t;
-
-    cin >> t;
-
+void preSuf(string t){
     t = "*" + t;
 
     p[0] = 0;
@@ -31,6 +27,15 @@ int main() {
             p[i] = 0;
         }
     }
+}
 
+int main() {
+    string t, w;
+    cin >> t >> w;
+    string tekst = w + "#" + t;
+    preSuf(tekst);
+    for(int i = 0;i<=tekst.size();i++){
+        cout << p[i] << " ";
+    }
     return 0;
 }
